@@ -1,0 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+char txt[1000001];
+int alp[26];
+int main(){
+}
