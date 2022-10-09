@@ -19,6 +19,7 @@ int main(){
         else if(max < num[i]){
             max = num[i];
         }
+
         
     }
     for(int i=0; i<5; i++){

@@ -1,5 +1,5 @@
 #include <stdio.h>
-int arr[10001];
+int arr[10001]= {0, };
 int main() {
    int n;
    scanf("%d", &n);
@@ -16,7 +16,7 @@ int main() {
    //init 0으로 셋팅
    for (int i = 0; i <= max; i++) {
       if (arr[i] != 0) {
-         for (int j = 0; j < arr[i]; j++) {
+         for (int j = 0; j < arr[i]; j++){
             printf("%d\n", i);
          }
       }

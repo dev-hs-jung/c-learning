@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-	int sum = 0;
+	int sum = 0,total, fake1=0, fake2=0;
 	int jot[9];
 
 	for (int i = 0; i < 9; i++) {
@@ -9,11 +9,10 @@ int main(){
 		sum += jot[i];
 	}
 	int remain = sum - 100;
-	int dif, fake1=0, fake2=0;
-	for (int i = 0; i < 9; i++) {
-		for (int j = i + 1; j < 9; j++) {
-			dif = jot[i] + jot[j];
-			if (dif == remain) {
+	for (int i = 0; i < 9; i++) { //0~8
+		for (int j = i + 1; j < 9; j++) { //1~8
+			total = jot[i] + jot[j];
+			if (total == remain) {
 				fake1 = i, fake2 = j;
 				break;
 			}
