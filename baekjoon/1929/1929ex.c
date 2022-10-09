@@ -1,19 +1,12 @@
 #include <stdio.h>
-int arr[1000];
-int main(){
-	int t, n,cnt=0;
-	scanf("%d", &t);
-
-    for(int k=0; k<t; k++){
-        scanf("%d",&n);
-        for (int i = 2; i <= n; i++) {
-            for(int j = i+i; j <= n; j += i){
-                arr[j] = 1;
-            }
-            if(arr[i] == 0){
-                cnt++;
-            }
-        }
-    }
-    printf("%d",cnt);
+int arr[1000001] = { 0, };
+int main() {
+   int n, m, i, j;
+   scanf("%d%d", &n, &m);
+   for (i = 2; i <= m; i++) {
+      if (!arr[i]) {
+         for (j = 2*i; j <= m; j += i)arr[j] = 1;
+         if (i >= n)   printf("%d\n", i);
+      }
+   }
 }
