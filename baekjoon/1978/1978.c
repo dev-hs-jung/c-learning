@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
 	int t,n,num;
@@ -12,7 +11,7 @@ int main()
 				cnt++;
 			}
 			if (n % j == 0){
-				num=1;
+				break;
 			}
 		}
 	}
